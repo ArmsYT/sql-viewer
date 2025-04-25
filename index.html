@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Table Viewer | ArmsYT</title>
+    <link rel="stylesheet" href="/src/css.css">
+</head>
+<body>
+<div class="container">
+    <h2>📥 Importer un fichier SQL et afficher les tables avec leurs champs et relations</h2>
+    <input type="file" id="sqlFile" accept=".sql">
+    <br><br>
+    <div class="controls-box">
+        <h3>🔧 Contrôles :</h3>
+        <div id="refreshButton" class="control-button">CTRL + SCROLL (zoom)</div>
+        <div id="clearButton" class="control-button">LEFT CLIC (deplace in zone)</div>
+    </div>
+    <br>
+    <h3>Tables, Champs et Relations trouvés :</h3>
+    <div class="table-list-container" id="tableListContainer">
+        <div class="move-area" id="moveArea"></div>
+        <div class="table-list" id="tableList"></div>
+    </div>
+    <div class="error-message" id="errorMessage"></div>
+</div>
+<script src='./src/index.js'></script>
+</body>
+</html>

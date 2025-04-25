@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    user-select: none;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.table-list-container {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #007bff;
+    margin-bottom: 30px;
+    cursor: grab;
+}
+.table-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-flow: row dense;
+    gap: 50px;
+    position: absolute;
+    padding: 20px;
+    width: 3000px;
+    transform-origin: 0 0;
+    transition: transform 0.1s ease;
+}
+.table-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+}
+.table-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+.field-list {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.field-list div {
+    font-size: 1rem;
+    color: #555;
+}
+.table-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.error-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #f44336;
+}
+.constraint {
+    font-style: italic;
+    color: #007bff;
+}
+.relation-line {
+    position: absolute;
+    background-color: rgba(0, 123, 255, 0.6);
+    height: 2px;
+    pointer-events: none;
+}
+.move-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    cursor: grab;
+    z-index: 9999;
+}
+
+.control-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    width: auto;
+    white-space: nowrap;
+}
+
+.control-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.control-button:active {
+    background-color: #003f7f;
+    transform: scale(0.95);
+}
